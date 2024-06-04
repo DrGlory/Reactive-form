@@ -1,6 +1,20 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+// import { bootstrapApplication } from '@angular/platform-browser';
+// import { SearchMovieComponent } from './app/search-movie/search-movie.component';
+// import { importProvidersFrom } from '@angular/core';
+// import { ReactiveFormsModule } from '@angular/forms';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+// bootstrapApplication(SearchMovieComponent, {
+//   providers: [importProvidersFrom(ReactiveFormsModule)]
+// }).catch(err => console.error(err));
+
+import { bootstrapApplication } from '@angular/platform-browser';
+import { SearchMovieComponent } from './app/search-movie/search-movie.component';
+import { importProvidersFrom } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+
+bootstrapApplication(SearchMovieComponent, {
+  providers: [importProvidersFrom(ReactiveFormsModule)]
+}).catch(err => console.error(err));
+
+
+
